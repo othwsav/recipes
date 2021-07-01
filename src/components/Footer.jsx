@@ -2,8 +2,15 @@ import React from 'react'
 
 const Footer = () => {
     return (
-        <footer>
-            <h3 style={{textAlign: 'center'}}>This is Foooooooooooooooooooter</h3>
+        <footer className="page-footer">
+            <p>
+                &copy;{` ${new Date().getFullYear()} `}
+                <span>SimpleRecipes</span>
+                {". Built with "}
+                <a href="https://gatsbyjs.com/" target="_blank" rel="noreferrer">Gatsby</a>
+                {" by "}
+                <a href="https://othwsav.vercel.app/" target="_blank" rel="noreferrer">Othwsav</a>
+            </p>
         </footer>
     )
 }

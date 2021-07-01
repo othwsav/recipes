@@ -1,5 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import '../assets/css/style.css'
+import 'normalize.css'
 
 
 export default function Home () {
