@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:200,400,600,800|Inconsolata:200,400,600,800");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200,400,600,700,800|Inconsolata:200,400,600,800");
 *,
 ::after,
 ::before {
@@ -378,13 +378,25 @@ form>*:last-child {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .logo{
+        font-size: 1.6em;
+        font-weight: 700;
+        text-shadow: 0px 4px 4px var(--grey-600);
+        // font-family: var(--headingFont);
+        &>:first-child{
+            color: var(--primary-700);
+        }
+        &>:last-child {
+            color: var(--black);
+        }
+    }
 }
 
-.nav-header img {
-    width: 200px;
-    margin-left: -6px;
-    margin-bottom: -9px;
-}
+// .nav-header img {
+//     width: 200px;
+//     margin-left: -6px;
+//     margin-bottom: -9px;
+// }
 
 .nav-btn {
     padding: 0.15rem 0.75rem;
