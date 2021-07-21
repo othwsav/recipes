@@ -4,13 +4,17 @@ import '../assets/css/style.css'
 import 'normalize.css'
 import { StaticImage } from 'gatsby-plugin-image'
 import AllRecipes from '../components/AllRecipes'
+import Seo from '../components/SEO'
+import test from '../assets/images/test.json'
 
 
 export default function Home () {
 	return (
 		<Layout>
+			<Seo title="Home"/>
 			<main className="page">
 				<header className="hero">
+					{test.a}
 					<StaticImage
 						src="../assets/images/main.jpeg"
 						alt="eggs and flour"

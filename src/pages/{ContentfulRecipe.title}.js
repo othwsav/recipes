@@ -3,7 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { graphql, Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import React from 'react'
+import slugify from 'slugify'
 import Layout from '../components/Layout'
+import Seo from '../components/SEO'
 
 
 const RecipeTemplate = ({ data }) => {
@@ -21,6 +23,7 @@ const RecipeTemplate = ({ data }) => {
 
     return (
         <Layout>
+			<Seo title={title} description={description}/>
             <main className="page">
                 <div className="recipe-page">
                     {/* hero */}
@@ -50,8 +53,9 @@ const RecipeTemplate = ({ data }) => {
                             {/* tags */}
                             <p className="recipe-tags">
                                 Tags : {tags.map((tag,i) => {
+                                    const slug = slugify(tag, {lower: true})
                                     return (
-                                    <Link to={`/${tag}`} key={i}>
+                                    <Link to={`/tags/${slug}`} key={i}>
                                         {tag}
                                     </Link>)
                                 })}
